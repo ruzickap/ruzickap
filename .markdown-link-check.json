@@ -1,0 +1,13 @@
+{
+  "aliveStatusCodes": [200, 999],
+  "ignorePatterns": [
+    {
+      "pattern": "^https://img.shields.io/"
+    },
+    {
+      "pattern": "^https://www.instagram.com/"
+    }
+  ],
+  "retryOn429": true,
+  "retryCount": 10
+}
