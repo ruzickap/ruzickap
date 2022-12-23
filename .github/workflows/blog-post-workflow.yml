@@ -15,4 +15,4 @@ jobs:
       - name: Pull in posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://blog.ruzicka.dev/feed.xml,https://linux.xvx.cz/feeds/posts/default"
+          feed_list: "https://ruzickap.github.io/feed.xml,https://linux.xvx.cz/feeds/posts/default"

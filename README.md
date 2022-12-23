@@ -10,7 +10,7 @@
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=plastic&logo=Twitter&logoColor=white)](https://twitter.com/Ruzicka_Petr)
 [![Medium](https://img.shields.io/badge/Medium-12100E?style=plastic&logo=medium&logoColor=white)](https://medium.com/@petr.ruzicka)
 
-📚 **Latest Blog Posts** ([linux.xvx.cz](https://linux.xvx.cz))
+📚 **Latest Blog Posts** ([blog.ruzicka.dev](https://blog.ruzicka.dev), [linux.xvx.cz](https://linux.xvx.cz))
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
@@ -26,4 +26,4 @@
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ruzickap&theme=github_dark&hide_border=true&layout=compact&langs_count=8)
 
 <!-- https://github.com/ashutosh00710/github-readme-activity-graph -->
-![Petr's GitHub activity graph](https://activity-graph.herokuapp.com/graph?username=ruzickap&theme=github-dark&hide_border=true)
+![Petr's GitHub activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=ruzickap&theme=github-dark&hide_border=true)
