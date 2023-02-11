@@ -15,7 +15,7 @@
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
 - [Blog migration to new URL](https://linux.xvx.cz/2023/02/blog-migration-to-new-url.html)
-- [Transfer photos wirelessly from Sony Cameras](https://ruzickap.github.io/posts/ftp-and-sony-camera/)
+- [Transfer photos wirelessly from Sony cameras](https://ruzickap.github.io/posts/ftp-and-sony-camera/)
 - [Amazon EKS - Karpenter tests](https://ruzickap.github.io/posts/amazon-eks-karpenter-tests/)
 - [Run the cheapest Amazon EKS](https://ruzickap.github.io/posts/cheapest-amazon-eks/)
 - [My Sony A7 IV settings](https://linux.xvx.cz/2022/09/my-sony-a7-iv-settings.html)
