@@ -2,7 +2,7 @@ name: Latest blog post workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * 0"
 
 jobs:
   update-readme-with-blog:
@@ -15,4 +15,7 @@ jobs:
       - name: Pull in posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://ruzickap.github.io/feed.xml,https://linux.xvx.cz/feeds/posts/default"
+          committer_username: "github-actions[bot]"
+          committer_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "docs(readme): update latest blog posts"
+          feed_list: "https://ruzickap.github.io/feed.xml"
