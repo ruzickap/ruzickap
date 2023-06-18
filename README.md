@@ -19,6 +19,7 @@
 - [Velero and cert-manager](https://ruzickap.github.io/posts/velero-and-cert-manager/)
 - [Trivy Operator Dashboard in Grafana](https://ruzickap.github.io/posts/trivy-operator-grafana/)
 - [Transfer photos wirelessly from Sony cameras](https://ruzickap.github.io/posts/ftp-and-sony-camera/)
+- [Amazon EKS - Karpenter tests](https://ruzickap.github.io/posts/amazon-eks-karpenter-tests/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
