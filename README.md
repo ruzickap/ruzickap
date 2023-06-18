@@ -14,6 +14,7 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [My favourite krew plugins for kubectl](https://ruzickap.github.io/posts/my-favourite-krew-plugins-kubectl/)
 - [Secrets Store CSI Driver and Reloader](https://ruzickap.github.io/posts/secrets-store-csi-driver-reloader/)
 - [Velero and cert-manager](https://ruzickap.github.io/posts/velero-and-cert-manager/)
 - [Trivy Operator Dashboard in Grafana](https://ruzickap.github.io/posts/trivy-operator-grafana/)
