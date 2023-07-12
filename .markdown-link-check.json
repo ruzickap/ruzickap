@@ -5,6 +5,9 @@
       "pattern": "^https://img.shields.io/"
     },
     {
+      "pattern": "^https://twitter.com/Ruzicka_Petr"
+    },
+    {
       "pattern": "^https://www.instagram.com/"
     }
   ],
