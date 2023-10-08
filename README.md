@@ -14,11 +14,11 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [Build secure and cheap Amazon EKS](https://ruzickap.github.io/posts/secure-cheap-amazon-eks/)
 - [Build secure Amazon EKS with Cilium and network encryption](https://ruzickap.github.io/posts/cilium-amazon-eks/)
 - [My favourite krew plugins for kubectl](https://ruzickap.github.io/posts/my-favourite-krew-plugins-kubectl/)
 - [Secrets Store CSI Driver and Reloader](https://ruzickap.github.io/posts/secrets-store-csi-driver-reloader/)
 - [Velero and cert-manager](https://ruzickap.github.io/posts/velero-and-cert-manager/)
-- [Trivy Operator Dashboard in Grafana](https://ruzickap.github.io/posts/trivy-operator-grafana/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
