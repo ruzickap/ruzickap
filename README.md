@@ -10,7 +10,7 @@
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=plastic&logo=Twitter&logoColor=white)](https://twitter.com/Ruzicka_Petr)
 [![Medium](https://img.shields.io/badge/Medium-12100E?style=plastic&logo=medium&logoColor=white)](https://medium.com/@petr.ruzicka)
 
-📚 **Latest Blog Posts** ([blog.ruzicka.dev](https://blog.ruzicka.dev))
+📚 **Latest Blog Posts** ([ruzickap.github.io](https://ruzickap.github.io))
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->

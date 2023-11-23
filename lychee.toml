@@ -1,0 +1,9 @@
+# https://lychee.cli.rs/#/usage/config
+
+#############################  Exclusions  ##########################
+
+# Exclude URLs and mail addresses from checking (supports regex)
+exclude = [
+  # Due to: [TIMEOUT] https://twitter.com/Ruzicka_Petr | Timeout
+  'twitter\.com/Ruzicka_Petr',
+]
