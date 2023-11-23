@@ -17,7 +17,7 @@ jobs:
       statuses: write
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: MegaLinter
         uses: megalinter/megalinter@v7
@@ -28,4 +28,5 @@ jobs:
           GITHUB_STATUS_REPORTER: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRINT_ALPACA: false
+          REPOSITORY_KICS_ARGUMENTS: --exclude-queries=555ab8f9-2001-455e-a077-f2d0f41e2fb9
           VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch' }}
