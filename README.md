@@ -1,3 +1,4 @@
+<!-- markdownlint-disable first-line-heading -->
 <!-- https://github.com/DenverCoder1/readme-typing-svg -->
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&color=58A6FF&width=435&lines=Petr+Ruzicka)
 
