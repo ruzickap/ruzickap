@@ -15,11 +15,11 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [Exploit vulnerability in a WordPress plugin with Kali Linux 2](https://ruzickap.github.io/posts/exploit-vulnerability-wordpress-plugin-kali-linux-2/)
 - [Build secure and cheap Amazon EKS with Pod Identities](https://ruzickap.github.io/posts/secure-cheap-amazon-eks-with-pod-identities/)
-- [Exploit vulnerability in a WordPress plugin with Kali Linux](https://ruzickap.github.io/posts/exploit-vulnerability-wordpress-plugin-kali-linux/)
+- [Exploit vulnerability in a WordPress plugin with Kali Linux](https://ruzickap.github.io/posts/exploit-vulnerability-wordpress-plugin-kali-linux-1/)
 - [Build secure and cheap Amazon EKS](https://ruzickap.github.io/posts/secure-cheap-amazon-eks/)
 - [Build secure Amazon EKS with Cilium and network encryption](https://ruzickap.github.io/posts/cilium-amazon-eks/)
-- [My favourite krew plugins for kubectl](https://ruzickap.github.io/posts/my-favourite-krew-plugins-kubectl/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
