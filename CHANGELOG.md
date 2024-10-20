@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0](https://github.com/ruzickap/ruzickap/compare/v1.0.0...v1.1.0) (2024-10-20)
+
+
+### Features
+
+* add GitHub default templates ([#17](https://github.com/ruzickap/ruzickap/issues/17)) ([13935d8](https://github.com/ruzickap/ruzickap/commit/13935d88f7a521583ffbbfd08a2203b736638f41))
+* **gh:** add default GitHub repo files ([#13](https://github.com/ruzickap/ruzickap/issues/13)) ([97deba1](https://github.com/ruzickap/ruzickap/commit/97deba1c92f7c98bb7d53ac0ccd9311f8bb81bfe))
+* **gh:** add default GitHub repo files ([#14](https://github.com/ruzickap/ruzickap/issues/14)) ([5184060](https://github.com/ruzickap/ruzickap/commit/51840603ad42470c42363fbab7b1098e4cc976b8))
+* **gh:** add default GitHub repo files ([#15](https://github.com/ruzickap/ruzickap/issues/15)) ([efc07d4](https://github.com/ruzickap/ruzickap/commit/efc07d4972fa17be8822cf759fb99495fb126e33))
+* **gha:** unify GHA - renovate, megalinter, markdown, and others ([b30ec77](https://github.com/ruzickap/ruzickap/commit/b30ec77a108e6cbe258f2ebde55df03b6ac3652e))
+
 ## 1.0.0 (2023-11-23)
 
 ## What's Changed
