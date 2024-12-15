@@ -15,11 +15,11 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [Using keep-sorted to organize Terraform objects](https://ruzickap.github.io/posts/terraform-keep-sorted/)
 - [Detect the hacker attacks on Amazon EKS and EC2 instances](https://ruzickap.github.io/posts/detect-a-hacker-attacks-eks-vm/)
 - [Exploit vulnerability in a WordPress plugin with Kali Linux 2](https://ruzickap.github.io/posts/exploit-vulnerability-wordpress-plugin-kali-linux-2/)
 - [Build secure and cheap Amazon EKS with Pod Identities](https://ruzickap.github.io/posts/secure-cheap-amazon-eks-with-pod-identities/)
 - [Exploit vulnerability in a WordPress plugin with Kali Linux](https://ruzickap.github.io/posts/exploit-vulnerability-wordpress-plugin-kali-linux-1/)
-- [Build secure and cheap Amazon EKS](https://ruzickap.github.io/posts/secure-cheap-amazon-eks/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
