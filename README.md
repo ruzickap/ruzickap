@@ -15,11 +15,11 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [TrueNAS CE 25.04 with Plex and qBittorrent](https://ruzickap.github.io/posts/truenas-plex-torrent/)
 - [Amazon EKS Auto Mode with cert-manager and Velero](https://ruzickap.github.io/posts/eks-auto-cert-manager-velero/)
 - [Slack notification for GitHub Pull Requests with status updates](https://ruzickap.github.io/posts/slack-notification-pull-request/)
 - [Build secure and cheap Amazon EKS Auto Mode](https://ruzickap.github.io/posts/secure-cheap-amazon-eks-auto/)
 - [Using keep-sorted to organize Terraform objects](https://ruzickap.github.io/posts/terraform-keep-sorted/)
-- [Detect the hacker attacks on Amazon EKS and EC2 instances](https://ruzickap.github.io/posts/detect-a-hacker-attacks-eks-vm/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
