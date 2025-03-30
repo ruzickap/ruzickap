@@ -10,9 +10,18 @@ on:
 permissions: read-all
 
 jobs:
+  github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "${GITHUB_CONTEXT}"
+
   mega-linter:
     runs-on: ubuntu-latest
-    if: ${{ !contains(fromJSON('["release-please--", "renovate/"]'), github.head_ref) }}
+    if: ${{ (!startsWith(github.ref_name, 'renovate/') && !startsWith(github.ref_name, 'release-please--')) || github.event_name == 'workflow_dispatch' }}
     timeout-minutes: 30
     steps:
       - name: Checkout Code
@@ -31,7 +40,7 @@ jobs:
           chmod a+x README.sh
 
       - name: 💡 MegaLinter
-        uses: oxsecurity/megalinter@ec124f7998718d79379a3c5b39f5359952baf21d # v8.4.2
+        uses: oxsecurity/megalinter@146333030da68e2e58c6ff826633824fabe01eaf # v8.5.0
         env:
           GITHUB_COMMENT_REPORTER: false
           # Disabled due to error: [GitHub Status Reporter] Error posting Status for REPOSITORY with ...: 403
