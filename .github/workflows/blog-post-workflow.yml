@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Pull in posts
-        uses: gautamkrishnar/blog-post-workflow@a438c193c42378ff312e0adea57c632d6cb14d95 # 1.9.1
+        uses: gautamkrishnar/blog-post-workflow@eba05ad46e6bac02165b77289978caf47699a41f # 1.9.3
         with:
           skip_commit: true
           feed_list: "https://ruzickap.github.io/feed.xml"
