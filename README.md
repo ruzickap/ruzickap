@@ -3,14 +3,19 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&color=58A6FF&width=435&lines=Petr+Ruzicka)
 
 <!-- https://github.com/Ileriayo/markdown-badges -->
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=plastic&logo=gmail&logoColor=white)](mailto:petr.ruzicka@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=plastic&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/petrruzicka/)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=plastic&logo=Instagram&logoColor=white)](https://www.instagram.com/petr.ruzicka_cz/)
+[![Homepage](https://img.shields.io/badge/Homepage-4285F4?style=plastic&logo=homeadvisor&logoColor=white)](https://ruzickap.github.io/)
+[![Email](https://img.shields.io/badge/Email-005FF9?style=plastic&logo=maildotru&logoColor=white)](mailto:petr.ruzicka@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=plastic&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/petrruzicka/)
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=plastic&logo=Facebook&logoColor=white)](https://www.facebook.com/petr.ruzicka)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=plastic&logo=Instagram&logoColor=white)](https://www.instagram.com/petr.ruzicka_cz/)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=plastic&logo=X&logoColor=white)](https://x.com/Ruzicka_Petr)
+[![Mastodon](https://img.shields.io/badge/-Mastodon-%232B90D9?style=plastic&logo=mastodon&logoColor=white)](https://mastodon.social/@ruzickap)
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=plastic&logo=YouTube&logoColor=white)](https://www.youtube.com/@PetrRuzicka)
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=plastic&logo=Twitter&logoColor=white)](https://twitter.com/Ruzicka_Petr)
-[![Mastodon](https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white)](https://mastodon.social/@ruzickap)
 [![Medium](https://img.shields.io/badge/Medium-12100E?style=plastic&logo=medium&logoColor=white)](https://medium.com/@petr.ruzicka)
+[![Unsplash](https://img.shields.io/badge/Unsplash-000000?style=plastic&logo=unsplash&logoColor=white)](https://unsplash.com/@ruzickap/)
+[![Pixabay](https://img.shields.io/badge/Pixabay-2EC66D?style=plastic&logo=pixabay&logoColor=white)](https://pixabay.com/users/ruzickap-7967890/)
+[![Flickr](https://img.shields.io/badge/Flickr-0063DC?style=plastic&logo=flickr&logoColor=white)](https://www.flickr.com/photos/petrruzicka/)
+[![500px](https://img.shields.io/badge/500px-0099E5?style=plastic&logo=500px&logoColor=white)](https://500px.com/p/petrruzicka)
 
 📚 **Latest Blog Posts** ([ruzickap.github.io](https://ruzickap.github.io))
 
