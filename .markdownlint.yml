@@ -9,11 +9,3 @@
 MD013:
   code_blocks: false # Don't enforce line length in code blocks (preserves code formatting)
   tables: false # Don't enforce line length in tables (prevents table structure breakage)
-
-# MD033 - Inline HTML
-# Allows specific HTML elements that are needed for functionality
-# Documentation: https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md#md033---inline-html
-MD033:
-  allowed_elements:
-    - a # Needed for rel="me" Mastodon verification links
-    - img # Needed for badge images inside anchor tags
