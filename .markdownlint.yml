@@ -16,3 +16,4 @@ MD013:
 MD033:
   allowed_elements:
     - a # Needed for rel="me" Mastodon verification links
+    - img # Needed for badge images inside anchor tags
