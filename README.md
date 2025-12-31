@@ -9,6 +9,7 @@
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=plastic&logo=Facebook&logoColor=white)](https://www.facebook.com/petr.ruzicka)
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=plastic&logo=YouTube&logoColor=white)](https://www.youtube.com/@PetrRuzicka)
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=plastic&logo=Twitter&logoColor=white)](https://twitter.com/Ruzicka_Petr)
+[![Mastodon](https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white)](https://mastodon.social/@ruzickap)
 [![Medium](https://img.shields.io/badge/Medium-12100E?style=plastic&logo=medium&logoColor=white)](https://medium.com/@petr.ruzicka)
 
 📚 **Latest Blog Posts** ([ruzickap.github.io](https://ruzickap.github.io))
