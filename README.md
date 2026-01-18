@@ -21,11 +21,11 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [Amazon EKS and Grafana stack](https://ruzickap.github.io/posts/amazon-eks-grafana-stack/)
 - [Exploiting RCE Vulnerabilities in Ollama on Kubernetes](https://ruzickap.github.io/posts/ollama-k8s-exploitation/)
 - [MCP Servers running on Kubernetes](https://ruzickap.github.io/posts/mcp-servers-k8s/)
 - [TrueNAS CE 25.04 with Plex and qBittorrent](https://ruzickap.github.io/posts/truenas-plex-torrent/)
 - [Amazon EKS Auto Mode with cert-manager and Velero](https://ruzickap.github.io/posts/eks-auto-cert-manager-velero/)
-- [Slack notification for GitHub Pull Requests with status updates](https://ruzickap.github.io/posts/slack-notification-pull-request/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
