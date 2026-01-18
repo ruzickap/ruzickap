@@ -29,7 +29,7 @@ jobs:
           commit-message: "docs: update latest blog posts"
           title: "docs: update latest blog posts"
           body: "This PR updates the README with the latest blog posts."
-          branch: "update-readme-with-blog-${{ github.sha }}"
+          branch: "chore/update-readme-with-blog-${{ github.sha }}"
           labels: "blog post"
           reviewers: ${{ github.repository_owner }}
           assignees: ${{ github.repository_owner }}
