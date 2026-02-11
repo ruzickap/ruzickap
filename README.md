@@ -28,9 +28,8 @@
 - [Amazon EKS Auto Mode with cert-manager and Velero](https://ruzickap.github.io/posts/eks-auto-cert-manager-velero/)
 <!-- BLOG-POST-LIST:END -->
 
-<!-- https://github.com/anuraghazra/github-readme-stats -->
-![Petr's GitHub stats](https://github-readme-stats.vercel.app/api?username=ruzickap&theme=github_dark&hide_border=true&show_icons=true&card_width=490)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ruzickap&theme=github_dark&hide_border=true&layout=compact&langs_count=8)
-
 <!-- https://github.com/ashutosh00710/github-readme-activity-graph -->
 ![Petr's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ruzickap&theme=github-dark&hide_border=true)
+
+<!-- https://ossinsight.io/analyze/ruzickap -->
+[![Dashboard stats of @ruzickap](https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=1434387&image_size=auto&color_scheme=dark)](https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=1434387)
