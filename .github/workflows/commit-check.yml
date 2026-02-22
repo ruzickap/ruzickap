@@ -20,15 +20,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Create commit-check.toml file
-        run: |
-          cat > commit-check.toml << EOF
-          [commit]
-          subject_capitalized = false
-          subject_imperative = false
-          subject_max_length = 80
-          EOF
-
       - uses: commit-check/commit-check-action@b4e55455950985a1e428ad5cfee37a6fd5879902 # v2.4.1
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          CCHK_SUBJECT_CAPITALIZED: false
+          CCHK_SUBJECT_MAX_LENGTH: 72

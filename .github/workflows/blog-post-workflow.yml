@@ -26,9 +26,9 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
         with:
-          commit-message: "docs: update latest blog posts"
-          title: "docs: update latest blog posts"
-          body: "This PR updates the README with the latest blog posts."
+          commit-message: "docs: update the latest blog posts"
+          title: "docs: update the latest blog posts"
+          body: "This PR updates the README to include the latest blog posts."
           branch: "chore/update-readme-with-blog-${{ github.sha }}"
           labels: "blog post"
           reviewers: ${{ github.repository_owner }}
