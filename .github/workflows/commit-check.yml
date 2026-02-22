@@ -22,5 +22,6 @@ jobs:
 
       - uses: commit-check/commit-check-action@b4e55455950985a1e428ad5cfee37a6fd5879902 # v2.4.1
         env:
+          GITHUB_TOKEN: ${{ github.token }}
           CCHK_SUBJECT_CAPITALIZED: false
           CCHK_SUBJECT_MAX_LENGTH: 72
