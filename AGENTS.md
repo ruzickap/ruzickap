@@ -17,13 +17,13 @@ To lint locally, use these individual tools:
 rumdl .
 
 # Shell linting (standalone scripts or extracted code blocks)
-shellcheck --exclude=SC2317 <file.sh>
+shellcheck --exclude=SC2317 file.sh
 
 # Shell formatting
-shfmt --case-indent --indent 2 --space-redirects <file.sh>
+shfmt --case-indent --indent 2 --space-redirects file.sh
 
 # JSON linting (comments allowed)
-jsonlint --comments <file.json>
+jsonlint --comments file.json
 
 # Link checking
 lychee --config lychee.toml .
@@ -37,7 +37,7 @@ checkov --quiet -d .
 trivy fs --severity HIGH,CRITICAL --ignore-unfixed .
 
 # TypeScript/JavaScript formatting (if applicable)
-prettier --html-whitespace-sensitivity=ignore --write <file>
+prettier --html-whitespace-sensitivity=ignore --write file
 ```
 
 There are no individual test commands; MegaLinter runs all linters
