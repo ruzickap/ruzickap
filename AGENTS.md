@@ -1,109 +1,171 @@
 # AI Agent Guidelines
 
-## Overview
+## Project Overview
 
-This document provides guidelines and best practices for AI agents working
-on this repository. Follow these standards to ensure consistency, quality,
-and maintainability across all contributions.
+This is a **GitHub Profile README repository** (`ruzickap/ruzickap`).
+It contains no application source code -- only Markdown, YAML (GitHub
+Actions workflows), JSON/JSON5 configs, and TOML configs. CI validation
+is handled by MegaLinter (documentation flavor).
 
-## Table of Contents
+## Build / Lint / Test Commands
 
-- [AI Agent Guidelines](#ai-agent-guidelines)
-  - [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
-  - [Markdown Files](#markdown-files)
-    - [Linting and Formatting](#linting-and-formatting)
-    - [Markdown Best Practices](#markdown-best-practices)
-  - [Version Control](#version-control)
-    - [Commit Messages](#commit-messages)
-      - [Format Rules](#format-rules)
-      - [Commit Message Structure](#commit-message-structure)
-        - [Example](#example)
-    - [Branching](#branching)
-    - [Pull Requests](#pull-requests)
-  - [Quality \& Best Practices](#quality--best-practices)
+There is no build step or test suite. All validation runs via CI.
+To lint locally, use these individual tools:
 
-## Markdown Files
+```bash
+# Markdown linting
+rumdl .
 
-### Linting and Formatting
+# Shell linting (standalone scripts or extracted code blocks)
+shellcheck --exclude=SC2317 <file.sh>
 
-- **Markdown compliance**: Ensure all Markdown files pass `rumdl` checks
-- **Code blocks**: For `bash`/`shell` code blocks:
-  - Verify they pass `shellcheck` validation
-  - Format with `shfmt` for consistency
+# Shell formatting
+shfmt --case-indent --indent 2 --space-redirects <file.sh>
 
-### Markdown Best Practices
+# JSON linting (comments allowed)
+jsonlint --comments <file.json>
 
-- Use proper heading hierarchy (don't skip levels)
-- Wrap lines at 80 characters for readability
-- Use semantic HTML only when necessary
+# Link checking
+lychee --config lychee.toml .
+
+# GitHub Actions workflow validation
+actionlint
+
+# Terraform (if .tf files are added)
+tflint
+checkov --quiet -d .
+trivy fs --severity HIGH,CRITICAL --ignore-unfixed .
+
+# TypeScript/JavaScript formatting (if applicable)
+prettier --html-whitespace-sensitivity=ignore --write <file>
+```
+
+There are no individual test commands; MegaLinter runs all linters
+together in CI on push to non-main branches.
+
+## Code Style Guidelines
+
+### Markdown
+
+- Lint with `rumdl` (config: `.rumdl.toml`); `CHANGELOG.md` excluded
+- Proper heading hierarchy -- never skip levels
+- Wrap lines at **72 characters**
+- Use fenced code blocks with language identifiers (`bash`, `json`,
+  `yaml`, etc.)
 - Prefer code fences over inline code for multi-line examples
-- Include language identifiers in code fences
+- Use semantic HTML only when necessary
+- Shell code blocks (tagged `bash`, `shell`, or `sh`) are extracted
+  and validated by `shellcheck` and `shfmt` during CI
+
+### Shell Scripts and Code Blocks
+
+- Must pass `shellcheck` (SC2317 excluded)
+- Format with `shfmt --case-indent --indent 2 --space-redirects`
+- Use **2 spaces** for indentation, never tabs
+- Variables in **UPPER_CASE**: `${MY_VARIABLE}`
+- Quote variable expansions: `"${VARIABLE}"`
+- Use `set -euxo pipefail` in multi-line scripts
+- Indent `case` statements
+
+### YAML (GitHub Actions Workflows)
+
+- Start files with `---` document separator
+- Include a block comment header describing the workflow purpose
+- Set `permissions: read-all` at the top level; scope overrides
+  per job as needed
+- **Pin all actions to full SHA** with a version comment:
+  `uses: actions/checkout@<sha> # v6.0.2`
+- Set `timeout-minutes` on every job
+- Use `keep-sorted start` / `keep-sorted end` comments for
+  alphabetically ordered blocks
+- Environment variables in UPPER_CASE
+
+### JSON / JSON5
+
+- Must pass `jsonlint --comments`
+- Comments are allowed (JSON5 style `//` and `/** */`)
+- Use `keep-sorted` markers for alphabetical ordering
+
+### General Formatting
+
+- **2 spaces** for indentation everywhere (YAML, JSON, Markdown, shell)
+- No tabs
+- Consistent formatting maintained by automated linters
+
+## Naming Conventions
+
+- **Shell variables**: UPPER_CASE (`${GITHUB_TOKEN}`)
+- **Branch names**: `<type>/<description>` using Conventional Branch
+  format (e.g., `feat/add-widget`, `fix/broken-link`,
+  `chore/update-deps`)
+- **Files**: lowercase with hyphens (e.g., `blog-post-workflow.yml`)
+
+## Error Handling
+
+- Shell scripts: always use `set -euxo pipefail` or equivalent
+  shell option (`bash -euxo pipefail {0}` in workflow `defaults`)
+- Quote all variable expansions to prevent word splitting
+
+## Security
+
+CI runs multiple security scanners (`checkov`, `devskim`, `kics`,
+`trivy`). When modifying workflows or IaC:
+
+- Never expose secrets in logs
+- Use `${{ secrets.* }}` for sensitive values
+- Pin GitHub Actions to full SHA, not tags
+- Prefer `permissions: read-all`; grant write only where needed
 
 ## Version Control
 
 ### Commit Messages
 
-#### Format Rules
+Conventional commit format validated by `commit-check` action:
 
-- **Conventional commit format**: Use standard types (`feat`, `fix`, `docs`,
-  `chore`, `refactor`, `test`, `style`, `perf`, `ci`, `build`, `revert`)
-- **Line limits**: Subject ≤ 80 characters, body lines ≤ 80 characters
-- **Single blank line**: Between subject and body, between body paragraphs
+- **Format**: `<type>: <description>` (lowercase, imperative mood)
+- **Types**: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`,
+  `style`, `perf`, `ci`, `build`, `revert`
+- **Subject**: max 72 characters, no trailing period
+- **Body**: optional; wrap at 72 characters; explain what and why
+- **References**: use `Fixes`, `Closes`, or `Resolves` for issues
 
-#### Commit Message Structure
-
-- **Subject line**:
-  - Imperative mood (e.g., "add" not "added" or "adds")
-  - Use lower case (except for proper nouns and abbreviations)
-  - No period at the end
-  - Maximum 80 characters
-  - Format: `<type>: <description>`
-
-- **Body** (optional but recommended for non-trivial changes):
-  - Explain **what** changed and **why**
-  - Wrap lines at 80 characters
-  - Use Markdown formatting
-  - Separate paragraphs with blank lines
-  - Reference issues using keywords: `Fixes`, `Closes`, `Resolves`
-
-##### Example
-
-```markdown
+```text
 feat: add automated dependency updates
 
 - Implement Dependabot configuration
 - Configure weekly security updates
-- Add auto-merge for patch/minor updates
 
 Resolves: #123
 ```
 
 ### Branching
 
-- **Naming convention**: Follow the
-  [Conventional Branch](https://conventional-branch.github.io/)
-  specification
+Follow [Conventional Branch](https://conventional-branch.github.io/):
 
-- **Naming guidelines**:
-  - Keep branch names concise and descriptive
-  - Use kebab-case (lower case with hyphens)
-  - Include issue number when applicable: `feat/123-add-feature-name`
+- `feat/` or `feature/` -- new features
+- `fix/` or `bugfix/` -- bug fixes
+- `hotfix/` -- urgent production fixes
+- `release/` -- release prep (e.g., `release/v1.2.0`)
+- `chore/` -- maintenance tasks
+
+Use lowercase, hyphens, no consecutive/leading/trailing hyphens.
+Include issue numbers when applicable: `feat/issue-42-new-widget`.
 
 ### Pull Requests
 
-- **Always create draft PR** - Create pull requests as drafts initially
-- **Title format** - Use conventional commit format (`feat: add new feature`)
-- **Description** - Include clear explanation of changes and motivation
-- **Link issues** - Reference related issues using keywords (Fixes, Closes,
-  Resolves)
+- Always create as **draft** initially
+- Title must follow conventional commit format (enforced by
+  `semantic-pull-request` action)
+- Include a clear description and link related issues
 
-## Quality & Best Practices
+## CI Pipelines
 
-- Pass pre-commit hooks
-- Follow project coding standards
-- Include tests for new functionality
-- Update documentation for user-facing changes
-- Make atomic, focused commits
-- Explain reasoning behind changes
-- Maintain consistent formatting
+| Workflow                | Trigger             | Purpose                          |
+| ----------------------- | ------------------- | -------------------------------- |
+| `mega-linter`           | Push (non-main)     | Linting and security checks      |
+| `commit-check`          | PR to main          | Commit message validation        |
+| `semantic-pull-request` | PR events           | PR title validation              |
+| `release-please`        | Push to main        | Automated releases and changelog |
+| `renovate`              | Push to main/weekly | Dependency updates               |
+| `codeql`                | Push to main/weekly | Static security analysis         |
+| `scorecards`            | Push to main/weekly | OSSF security scoring            |
