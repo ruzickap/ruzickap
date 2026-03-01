@@ -76,15 +76,14 @@ together in CI on push to non-main branches.
 - **Pin all actions to full SHA** with a version comment:
   `uses: actions/checkout@<sha> # v6.0.2`
 - Set `timeout-minutes` on every job
-- Use `keep-sorted start` / `keep-sorted end` comments for
-  alphabetically ordered blocks
+- Use `# keep-sorted` comments for alphabetically ordered blocks
 - Environment variables in UPPER_CASE
 
 ### JSON / JSON5
 
 - Must pass `jsonlint --comments`
 - Comments are allowed (JSON5 style `//` and `/** */`)
-- Use `keep-sorted` markers for alphabetical ordering
+- Use `# keep-sorted` comments for alphabetical ordering
 
 ### General Formatting
 
@@ -161,7 +160,7 @@ Include issue numbers when applicable: `feat/issue-42-new-widget`.
 ## CI Pipelines
 
 | Workflow                | Trigger             | Purpose                          |
-| ----------------------- | ------------------- | -------------------------------- |
+|-------------------------|---------------------|----------------------------------|
 | `mega-linter`           | Push (non-main)     | Linting and security checks      |
 | `commit-check`          | PR to main          | Commit message validation        |
 | `semantic-pull-request` | PR events           | PR title validation              |
