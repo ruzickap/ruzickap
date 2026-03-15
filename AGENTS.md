@@ -49,7 +49,7 @@ together in CI on push to non-main branches.
 
 - Lint with `rumdl` (config: `.rumdl.toml`); `CHANGELOG.md` excluded
 - Proper heading hierarchy -- never skip levels
-- Wrap lines at **72 characters**
+- Wrap lines at **80 characters**
 - Use fenced code blocks with language identifiers (`bash`, `json`,
   `yaml`, etc.)
 - Prefer code fences over inline code for multi-line examples
