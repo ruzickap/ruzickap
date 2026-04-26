@@ -18,13 +18,13 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Pull in posts
-        uses: gautamkrishnar/blog-post-workflow@6a6e64abd1f651445da8e59611d0ca0110979aa5 # 1.9.4
+        uses: gautamkrishnar/blog-post-workflow@2786e54a01b71aec80a5118c2bd6b5044e842597 # 1.9.6
         with:
           skip_commit: true
           feed_list: "https://ruzickap.github.io/feed.xml"
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           commit-message: "docs: update the latest blog posts"
           title: "docs: update the latest blog posts"
