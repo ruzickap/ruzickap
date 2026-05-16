@@ -107,8 +107,8 @@ together in CI on push to non-main branches.
 
 ## Security
 
-CI runs multiple security scanners (`checkov`, `devskim`, `kics`,
-`trivy`). When modifying workflows or IaC:
+CI runs multiple security scanners (`checkov`, `devskim`, `trivy`).
+When modifying workflows or IaC:
 
 - Never expose secrets in logs
 - Use `${{ secrets.* }}` for sensitive values
