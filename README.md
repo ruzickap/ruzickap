@@ -21,11 +21,11 @@
 
 <!-- https://github.com/gautamkrishnar/blog-post-workflow -->
 <!-- BLOG-POST-LIST:START -->
+- [Amazon Bedrock AgentCore Slack Bot deployed with OpenTofu](https://ruzickap.github.io/posts/bedrock-agentcore-slack-opentofu/)
 - [Amazon EKS with Open WebUI and AWS Bedrock managed by OpenTofu](https://ruzickap.github.io/posts/openwebui-eks-bedrock-opentofu/)
 - [Amazon EKS with Envoy Gateway deployed using Argo CD](https://ruzickap.github.io/posts/amazon-eks-envoy-gateway-argocd/)
 - [Bootstrap EKS Auto Mode Cluster with ACK and kro using Kind](https://ruzickap.github.io/posts/bootstrap-eks-auto-mode-bootstrap-ack-kro-velero/)
 - [Amazon EKS and Grafana stack](https://ruzickap.github.io/posts/amazon-eks-grafana-stack/)
-- [Exploiting RCE Vulnerabilities in Ollama on Kubernetes](https://ruzickap.github.io/posts/ollama-k8s-exploitation/)
 <!-- BLOG-POST-LIST:END -->
 
 <!-- https://ossinsight.io/analyze/ruzickap -->
