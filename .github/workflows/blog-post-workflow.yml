@@ -4,13 +4,14 @@ on:
   schedule:
     - cron: 0 0 * * 0
 
-permissions: read-all
+permissions: {}
 
 jobs:
   update-readme-with-blog:
     name: Update this repo's README with latest blog posts
     runs-on: ubuntu-latest
     permissions:
+      actions: write # needed to start MegaLinter on the pull request branch
       contents: write
       pull-requests: write
     steps:
@@ -26,13 +27,22 @@ jobs:
           feed_list: "https://ruzickap.github.io/feed.xml"
 
       - name: Create Pull Request
+        id: create-pull-request
         uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         with:
           commit-message: "docs: update the latest blog posts"
           title: "docs: update the latest blog posts"
           body: "This PR updates the README to include the latest blog posts."
-          branch: "chore/update-readme-with-blog-${{ github.sha }}"
+          branch: "chore/update-readme-with-blog"
           labels: "blog post"
           reviewers: ${{ github.repository_owner }}
           assignees: ${{ github.repository_owner }}
           sign-commits: true
+
+      # Pushes made with GITHUB_TOKEN start no workflows - workflow_dispatch is the exception
+      - name: Run MegaLinter on the pull request branch
+        if: steps.create-pull-request.outputs.pull-request-operation == 'created' || steps.create-pull-request.outputs.pull-request-operation == 'updated'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULL_REQUEST_BRANCH: ${{ steps.create-pull-request.outputs.pull-request-branch }}
+        run: gh workflow run mega-linter.yml --repo "${GITHUB_REPOSITORY}" --ref "${PULL_REQUEST_BRANCH}"

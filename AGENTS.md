@@ -15,7 +15,8 @@ code, no build step, no tests, and no package manager**. Do not add a
   `<!-- BLOG-POST-LIST:START -->` / `END` markers is auto-generated weekly
   by `.github/workflows/blog-post-workflow.yml` from
   `https://ruzickap.github.io/feed.xml`. Edit the markers/surrounding text,
-  never the list entries.
+  never the list entries. The job opens its PR with `GITHUB_TOKEN`, whose
+  pushes trigger no workflows, so it starts `mega-linter.yml` itself.
 
 ## Linting (no local runner is committed)
 
