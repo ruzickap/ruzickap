@@ -25,7 +25,8 @@ single check locally, run the underlying tool directly with its repo config:
 
 - Markdown: `rumdl check .` (config `.rumdl.toml`; `markdownlint` is
   intentionally disabled in favor of rumdl).
-- Links: `lychee .` (config `lychee.toml` + `.lycheeignore`).
+- Links: `lychee .` (config `lychee.toml` + `.lycheeignore`). Ignore lines
+  are unanchored regexes: `x\.com` would also skip `500px.com`.
 - Shell **inside** ```` ```bash ```` / `shell` / `sh` code fences is
   extracted and validated: `shellcheck --exclude=SC2317` and
   `shfmt --case-indent --indent 2 --space-redirects`. Keep fenced shell
