@@ -28,13 +28,15 @@ single check locally, run the underlying tool directly with its repo config:
   intentionally disabled in favor of rumdl).
 - Links: `lychee .` (config `lychee.toml` + `.lycheeignore`). Ignore lines
   are unanchored regexes: `x\.com` would also skip `500px.com`.
-- Shell **inside** ```` ```bash ```` / `shell` / `sh` code fences is
-  extracted and validated: `shellcheck --exclude=SC2317` and
+- Shell **inside** ```` ```bash ```` / `shell` / `sh` code fences of
+  changed Markdown files is extracted and validated:
+  `shellcheck --exclude=SC2317` and
   `shfmt --case-indent --indent 2 --space-redirects`. Keep fenced shell
   snippets valid and use uppercase `${VARIABLES}`.
 
-CI runs MegaLinter only on **non-`main` branches** and only when a
-`**/*.md` file changed, so push doc work on a branch, not to `main`.
+CI runs MegaLinter on every push to a non-`main` branch (Renovate's
+`chore/renovate/*` branches are skipped), so push doc work on a branch, not
+to `main`.
 
 ## Commits, branches, PRs
 
@@ -42,8 +44,8 @@ CI runs MegaLinter only on **non-`main` branches** and only when a
   `feat(gha): ...`, `chore(deps): ...`. Subject ≤ 72 chars, lowercase, no
   trailing period, imperative mood. Enforced by `commit-check` on PRs to
   `main`.
-- **PR titles** must also be conventional (enforced by
-  `semantic-pull-request`).
+- **PR titles** must also be conventional (enforced by `commit-check` with
+  `pr-title: true`).
 - **Branches** must follow Conventional Branch (`feature/`, `bugfix/`,
   `hotfix/`, `release/`, `chore/`); lowercase + hyphens only. Enforced by
   `commit-check` (bots are exempted).
@@ -57,10 +59,10 @@ When editing anything under `.github/workflows/`:
 - Validate with `actionlint`.
 - Pin every action to a **full commit SHA** (with a `# vX.Y.Z` comment),
   never a tag — existing workflows show the pattern.
-- Keep `permissions: read-all` at the top level and grant write scopes only
-  on the specific job that needs them.
+- Keep `permissions: {}` at the top level and grant scopes only on the
+  specific job that needs them.
 - Workflows are also scanned by `checkov` (`.checkov.yml` skips
-  `CKV_GHA_7`), `zizmor`, `trivy`, and `DevSkim` via MegaLinter.
+  `CKV_GHA_7`), `zizmor`, and `trivy` via MegaLinter.
 
 ## Misc
 
