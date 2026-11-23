@@ -50,7 +50,7 @@ jobs:
         run: |
           echo "${TS}" > slack-message-timestamp.txt
 
-      # Artifacts are kept 90 days - a cache entry that is never restored is deleted after 7
+      # Artifacts are kept for the repo retention period (90 days by default) - a cache entry that is never restored is deleted after 7
       - name: Save slack message timestamp
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -73,7 +73,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Skip artifacts from fork runs - a fork pull request can upload one with any name and content
-          RUN_ID=$(gh api "repos/${GH_REPO}/actions/artifacts?name=${ARTIFACT_NAME}" --jq '[.artifacts[] | select((.expired | not) and .workflow_run.head_repository_id == .workflow_run.repository_id)][0].workflow_run.id // empty')
+          RUN_IDS=$(gh api --paginate "repos/${GH_REPO}/actions/artifacts?name=${ARTIFACT_NAME}" --jq '.artifacts[] | select((.expired | not) and .workflow_run.head_repository_id == .workflow_run.repository_id) | .workflow_run.id')
+          RUN_ID=${RUN_IDS%%$'\n'*} # the API lists the newest artifact first
           if [[ -n "${RUN_ID}" ]]; then
             gh run download "${RUN_ID}" --name "${ARTIFACT_NAME}" --dir "${RUNNER_TEMP}/${ARTIFACT_NAME}"
             SLACK_TIMESTAMP=$(< "${RUNNER_TEMP}/${ARTIFACT_NAME}/slack-message-timestamp.txt")
