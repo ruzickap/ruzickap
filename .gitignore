@@ -1,2 +1,4 @@
 # pre-commit configuration file
 .pre-commit-config.yaml
+# lychee link checker cache (lychee.toml sets cache = true)
+.lycheecache
