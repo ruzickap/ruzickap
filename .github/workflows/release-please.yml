@@ -22,6 +22,6 @@ jobs:
       pull-requests: write
     steps:
       - name: Create release with Release Please
-        # No release-type input: it would ignore .release-please-manifest.json and look for
-        # the last release only in the newest ~250 commits (v1.0.0 is older)
         uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        with:
+          release-type: simple
